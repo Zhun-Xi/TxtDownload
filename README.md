@@ -155,33 +155,7 @@ class 新网站(Novel):
 
 
 ## 系统自动加载机制
-CrawlerManager 类会自动扫描 爬虫实现 目录下的所有Python文件，并加载符合条件的爬虫类：
-def ImportClasses(self):
-    folder_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '爬虫实现'))
-    for filename in os.listdir(folder_path):
-        if filename.endswith('.py') and filename != 'Novel.py' and not filename.startswith('__'):
-            module_name = filename[:-3]
-            try:
-                module = importlib.import_module(module_name)   # 动态导入模块
-                # 遍历模块中的所有类
-                for name, obj in inspect.getmembers(module, inspect.isclass):
-                    if issubclass(obj, Novel) and obj is not Novel:  # 检查类是否是Novel的子类(但不是Novel本身)
-                        # 检查是否存在 name 和 link 类属性且非空
-                        if not hasattr(obj, 'name') or getattr(obj, 'name', '') == '':
-                            self.logger.error(f"跳过类 {name}: name 类属性缺失或为空")
-                            continue
-                        if not hasattr(obj, 'link') or getattr(obj, 'link', '') == '':
-                            self.logger.error(f"跳过类 {name}: link 类属性缺失或为空")
-                            continue
-
-                        # 添加到classes字典中
-                        self.classes.append(obj)
-                        
-                        # 检查 GetBookUrlFromBookName 是否被重写
-                        if 'GetBookUrlFromBookName' in obj.__dict__:
-                            self.searchable_classes.append(obj)
-            except Exception as e:
-                self.logger.error(f"导入或实例化模块 {module_name} 时出错: {e}")
+CrawlerManager 类会自动扫描 爬虫实现 目录下的所有Python文件，并加载符合条件的爬虫类
 
 
 ## 启动和使用
@@ -203,29 +177,6 @@ def ImportClasses(self):
    - 确保实现了 GetBookUrlFromBookName 方法
    - 检查搜索URL是否正确
    - 验证返回的数据格式是否符合要求
-
-   
-## 项目扩展建议
-1. 添加更多网站支持
-   - 分析流行小说网站的结构
-   - 创建对应的爬虫类
-2. 增强用户体验
-   - 添加阅读进度保存功能
-   - 实现书籍分类和推荐
-   - 优化移动设备支持
-3. 提高性能
-   - 实现内容缓存机制
-   - 优化并发爬取策略
-   - 添加数据库支持
-
-
-## 贡献指南
-欢迎贡献新的爬虫模块或功能改进！请遵循以下步骤：
-
-1. 创建新的爬虫类文件
-2. 实现必要的方法
-3. 测试功能是否正常
-4. 提交代码并更新文档
 
 
 ## 许可证
