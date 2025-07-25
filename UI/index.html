@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小说书架 - 在线阅读平台</title>
+    <!-- 模块化CSS文件 -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/search-mode.css">
+    <link rel="stylesheet" href="css/download-mode.css">
+    <link rel="stylesheet" href="css/reader-mode.css">
+    <link rel="stylesheet" href="css/bookshelf-mode.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="app-container">
+        <!-- 侧边栏 -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fas fa-book"></i>
+                <span>小说软件</span>
+            </div>
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active" id="search-mode">
+                    <i class="fas fa-search"></i>
+                    <span>搜书模式</span>
+                </a>
+                <a href="#" class="nav-item" id="download-mode">
+                    <i class="fas fa-download"></i>
+                    <span>直接下载模式</span>
+                </a>
+                <a href="#" class="nav-item" id="bookshelf-mode">
+                    <i class="fas fa-book-open"></i>
+                    <span>我的书架</span>
+                </a>
+                <a href="#" class="nav-item" id="reader-mode">
+                    <i class="fas fa-book-reader"></i>
+                    <span>阅读器</span>
+                </a>
+                <!-- <a href="#" class="nav-item">
+                    <i class="fas fa-clock"></i>
+                    <span>阅读记录</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-cog"></i>
+                    <span>设置</span>
+                </a> -->
+            </nav>
+        </aside>
+
+        <!-- 主内容区 -->
+        <main class="main-content">
+            <!-- 搜索框区域 -->
+            <div class="search-wrapper">
+                <div class="search-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" id="searchInput" placeholder="搜索书名、作者...">
+                    <button id="searchButton">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- 加载指示器 -->
+            <div class="loader" id="loader">
+                <i class="fas fa-spinner"></i>
+                <p>正在搜索中...</p>
+            </div>
+            
+            <!-- 内容区域 -->
+            <div class="content-area" id="contentArea">
+                <section class="search-results" id="searchResults">
+                    <div class="tabs-container" id="tabsContainer">
+                        <!-- 网站来源标签将在这里生成 -->
+                    </div>
+                    <h3 class="section-title">搜索结果</h3>
+                    <div class="books-grid" id="resultsContainer">
+                        <!-- 搜索结果将在这里显示 -->
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- 引入JS模块 -->
+    <script src="js/utils.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/ui/common.js"></script>
+    <script src="js/ui/searchMode.js"></script>
+    <script src="js/ui/downloadMode.js"></script>
+    <script src="js/ui/bookshelfMode.js"></script>
+    <script src="js/ui/readerMode.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

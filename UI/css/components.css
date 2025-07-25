@@ -1,0 +1,204 @@
+/* 加载指示器 */
+.loader {
+    display: none;
+    text-align: center;
+    padding: 20px;
+}
+
+.loader.visible {
+    display: block;
+}
+
+.loader i {
+    color: #ff9800;
+    font-size: 2rem;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}
+
+/* 分页样式 */
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    padding: 10px 0;
+}
+
+.pagination {
+    display: flex;
+    list-style: none;
+    gap: 8px;
+}
+
+.pagination li {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pagination li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 36px;
+}
+
+.pagination li:hover {
+    background-color: #fff3e0;
+}
+
+.pagination li.active {
+    background-color: #ff9800;
+}
+
+.pagination li.active a {
+    color: white;
+}
+
+/* 文件路径选择对话框样式 */
+.file-path-dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.file-path-dialog {
+    background: white;
+    border-radius: 8px;
+    padding: 24px;
+    width: 500px;
+    max-width: 90vw;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.file-path-dialog h3 {
+    margin: 0 0 20px 0;
+    color: #333;
+    font-size: 18px;
+    text-align: center;
+}
+
+.path-input-group,
+.filename-input-group {
+    margin-bottom: 16px;
+}
+
+.path-input-group label,
+.filename-input-group label {
+    display: block;
+    margin-bottom: 6px;
+    color: #555;
+    font-weight: 500;
+}
+
+.path-input-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.path-input-group label {
+    flex-shrink: 0;
+    margin-bottom: 0;
+    width: 80px;
+}
+
+.path-input-group input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+.path-input-group button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.path-input-group button:hover {
+    background-color: #0056b3;
+}
+
+.filename-input-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.filename-input-group label {
+    flex-shrink: 0;
+    margin-bottom: 0;
+    width: 80px;
+}
+
+.filename-input-group input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.file-extension {
+    color: #666;
+    font-weight: 500;
+}
+
+.dialog-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.btn-primary {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #218838;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #545b62;
+}

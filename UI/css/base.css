@@ -1,0 +1,61 @@
+/* 基本样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: #fdfcfa;
+}
+
+.app-container {
+    display: flex;
+    height: 100%;
+}
+
+/* 主内容区 */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 20px;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .app-container {
+        flex-direction: column;
+    }
+    
+    .search-wrapper {
+        margin-top: 20px;
+    }
+    
+    #resultsContainer {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .search-container {
+        flex-direction: column;
+    }
+    
+    .search-container input {
+        border-radius: 25px;
+        margin-bottom: 10px;
+    }
+    
+    .search-container button {
+        border-radius: 25px;
+        padding: 12px;
+    }
+    
+    #resultsContainer {
+        grid-template-columns: 1fr;
+    }
+}

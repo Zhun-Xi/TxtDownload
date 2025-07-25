@@ -1,0 +1,22 @@
+2025-07-26 00:09:56,094 - CrawlerManager - INFO - 成功实例化 Book365 from Book365.py
+2025-07-26 00:09:56,094 - CrawlerManager - DEBUG - Book365 已添加到 searchable_classes
+2025-07-26 00:09:56,096 - CrawlerManager - INFO - 成功实例化 WodeShuCheng from 我的书城网.py
+2025-07-26 00:09:56,096 - CrawlerManager - DEBUG - WodeShuCheng 已添加到 searchable_classes
+2025-07-26 00:09:56,820 - CrawlerManager - INFO - 成功实例化 Book365 from Book365.py
+2025-07-26 00:09:56,820 - CrawlerManager - DEBUG - Book365 已添加到 searchable_classes
+2025-07-26 00:09:56,820 - CrawlerManager - INFO - 成功实例化 WodeShuCheng from 我的书城网.py
+2025-07-26 00:09:56,824 - CrawlerManager - DEBUG - WodeShuCheng 已添加到 searchable_classes
+2025-07-26 00:10:07,458 - CrawlerManager - INFO - 爬虫 365小说网 返回 50 条结果
+2025-07-26 00:10:07,458 - CrawlerManager - INFO - 爬虫 我的书城网 返回 100 条结果
+2025-07-26 00:12:25,233 - CrawlerManager - INFO - 成功实例化 Book365 from Book365.py
+2025-07-26 00:12:25,237 - CrawlerManager - DEBUG - Book365 已添加到 searchable_classes
+2025-07-26 00:12:25,237 - CrawlerManager - INFO - 成功实例化 WodeShuCheng from 我的书城网.py
+2025-07-26 00:12:25,237 - CrawlerManager - DEBUG - WodeShuCheng 已添加到 searchable_classes
+2025-07-26 00:16:16,287 - CrawlerManager - INFO - 成功实例化 Book365 from Book365.py
+2025-07-26 00:16:16,291 - CrawlerManager - DEBUG - Book365 已添加到 searchable_classes
+2025-07-26 00:16:16,291 - CrawlerManager - INFO - 成功实例化 WodeShuCheng from 我的书城网.py
+2025-07-26 00:16:16,291 - CrawlerManager - DEBUG - WodeShuCheng 已添加到 searchable_classes
+2025-07-26 00:16:16,889 - CrawlerManager - INFO - 成功实例化 Book365 from Book365.py
+2025-07-26 00:16:16,889 - CrawlerManager - DEBUG - Book365 已添加到 searchable_classes
+2025-07-26 00:16:16,891 - CrawlerManager - INFO - 成功实例化 WodeShuCheng from 我的书城网.py
+2025-07-26 00:16:16,891 - CrawlerManager - DEBUG - WodeShuCheng 已添加到 searchable_classes
