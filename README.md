@@ -30,7 +30,7 @@
 
 
 ## 依赖项
-
+```
 ### Web框架
 flask>=2.0.0
 flask-cors>=3.0.0
@@ -47,14 +47,14 @@ beautifulsoup4>=4.9.0
 ### 浏览器自动化
 selenium>=4.0.0
 webdriver-manager>=3.5.0
-
+```
 
 ## 如何添加新的爬虫模块
 
 ### Novel基类解析
 Novel 类是所有爬虫的基类，它定义了爬虫的基本结构和方法。以下是关键部分的解析：
 
-'''Python
+```Python
 #### 类属性
  class Novel(ABC):
     name = ''  # 网站名称，必须重写
@@ -113,7 +113,7 @@ def SaveData(cls, save_path=None, data=None):
     '''保存数据到文件'''
     # 实现细节...
 
-'''
+```
 
 
 ### 创建新爬虫模块的步骤
@@ -121,6 +121,7 @@ def SaveData(cls, save_path=None, data=None):
 在 爬虫实现 目录下创建一个新的Python文件，如 新网站.py 。
 
 2. 1.导入基类
+```python
 from Novel import *
 
 1.定义爬虫类
@@ -132,6 +133,7 @@ class 新网站(Novel):
         super().__init__(dic_url, book_name, writer, 
                          web_site="https://www.example.com/", 
                          web_name="新网站名称")              
+```
 
 
 ## 系统自动加载机制
