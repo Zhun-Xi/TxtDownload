@@ -5,7 +5,7 @@
 
 
 ## 目录结构
-"""
+'''
 ├── UI/                   # 前端界面
 │   ├── css/              # 样式文件
 │   ├── js/               # JavaScript文件
@@ -19,7 +19,7 @@
 │   └── 我的书城网.py       # 我的书城网爬虫
 ├── requirements.txt      # 依赖库清单
 └── 启动小说爬虫.bat        # 一键启动脚本
-"""
+'''
 
 
 ## 系统架构
@@ -54,6 +54,7 @@ webdriver-manager>=3.5.0
 ### Novel基类解析
 Novel 类是所有爬虫的基类，它定义了爬虫的基本结构和方法。以下是关键部分的解析：
 
+'''Python
 #### 类属性
  class Novel(ABC):
     name = ''  # 网站名称，必须重写
@@ -111,6 +112,8 @@ def GetUrl(cls, url, timeout=5, other_headers={}, repeat=5, **kwargs):
 def SaveData(cls, save_path=None, data=None):
     '''保存数据到文件'''
     # 实现细节...
+
+'''
 
 
 ### 创建新爬虫模块的步骤
